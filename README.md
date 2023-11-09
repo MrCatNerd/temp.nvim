@@ -31,7 +31,9 @@ use {
     },
     cmd = "TempToggleMenu",
     config = function()
-        vim.schedule(require("temp").setup)
+        require("temp").setup()
+        -- or
+        -- vim.schedule(require("temp").setup)
     end,
 }
 ```
@@ -41,7 +43,9 @@ use {
     "MrCatNerd/temp.nvim",
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
-        vim.schedule(require("temp").setup)
+        require("temp").setup()
+        -- or
+        -- vim.schedule(require("temp").setup)
     end,
 }
 ```
