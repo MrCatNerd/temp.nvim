@@ -14,9 +14,6 @@ This plugin is for [neovim](https://neovim.io/) only. Version -1+ is required.
 use {
     "MrCatNerd/temp.nvim",
     requires = "nvim-lua/plenary.nvim",
-    config = function()
-        vim.schedule(require("temp").setup)
-    end,
 }
 ```
 
@@ -30,11 +27,6 @@ use {
         { "<leader>www", "<cmd>TempToggleMenu<CR>", desc = "Toggles temp.nvim menu" },
     },
     cmd = "TempToggleMenu",
-    config = function()
-        require("temp").setup()
-        -- or
-        -- vim.schedule(require("temp").setup)
-    end,
 }
 ```
 - without lazy loading:
@@ -42,10 +34,5 @@ use {
 {
     "MrCatNerd/temp.nvim",
     dependencies = "nvim-lua/plenary.nvim",
-    config = function()
-        require("temp").setup()
-        -- or
-        -- vim.schedule(require("temp").setup)
-    end,
 }
 ```
